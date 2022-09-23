@@ -1,0 +1,13 @@
+<h1>Realm creator!</h1>
+<div id="toolbar">
+  <button></button>
+</div>
+<div id="Realm">
+  <table [cellSpacing]="0" [cellPadding]="0">
+    <tbody>
+      <tr *ngFor="let row of realm">
+        <td style="width: 30px; height: 30px !important; padding: 0 !important; border: none;" *ngFor="let item of row"><img style="width: 100%; height: 100%" [src]="getImage(item)"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,1 +1,22 @@
-<p>path-finder works!</p>
+<h1>Welcome to the Mystic Realm path finder!</h1>
+
+<p>notation:<br>0 = Empty<br>1 = block<br>red,blue,yellow = pots</p>
+
+<label>Pleas enter the dungeon string thingy:</label>
+<input
+  matInput
+  id="dungeonstringythingyinputbox"
+  type="text"
+/>
+
+<p>{{ inputString }}</p>
+
+<div id="Realm">
+  <table [cellSpacing]="0" [cellPadding]="0">
+    <tbody>
+      <tr *ngFor="let row of realm">
+        <td style="width: 30px; height: 30px !important; padding: 0 !important; border: none;" *ngFor="let item of row"><img style="width: 100%; height: 100%" [src]="getImage(item)"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
