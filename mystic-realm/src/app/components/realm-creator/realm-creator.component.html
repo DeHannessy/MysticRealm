@@ -1,12 +1,19 @@
 <h1>Realm creator!</h1>
-<div id="toolbar" style="margin-bottom: 20px">
-  <button (click)="setSelectedObject(realm[3][2])"><img src="/assets/empty.png"></button>
+<div class="toolbar">
+  <button (click)="setSelectedObject(objects.empty)"><img src="/assets/empty.png"></button>
+  <button (click)="setSelectedObject(objects.block)"><img src="/assets/block.png"></button>
+  <button (click)="setSelectedObject(objects.blue)"><img src="/assets/blue_pot.png"></button>
+  <button (click)="setSelectedObject(objects.pink)"><img src="/assets/pink_pot.png"></button>
+  <button (click)="setSelectedObject(objects.yellow)"><img src="/assets/yellow_pot.png"></button>
+  <button (click)="setSelectedObject(objects.start)"><img src="/assets/panda.png"></button>
 </div>
 <div id="Realm">
   <table [cellSpacing]="0" [cellPadding]="0">
     <tbody>
       <tr *ngFor="let row of realm">
-        <td style="width: 30px; height: 30px !important; padding: 0 !important; border: none;" *ngFor="let item of row"><img style="width: 100%; height: 100%" [src]="getImage(item)"></td>
+        <td *ngFor="let item of row" (click)="blockClicked(item)">
+          <img style="width: 100%; height: 100%" [src]="getImage(item)">
+        </td>
       </tr>
     </tbody>
   </table>

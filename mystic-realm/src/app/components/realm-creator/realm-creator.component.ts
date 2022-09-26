@@ -29,6 +29,7 @@ export class RealmCreatorComponent implements OnInit {
     ["1", "1", "1", "1", "1", "1", "", "", "", "pink", "", "blue", "1", "1", "", "blue", "", "", "pink", "", "1", "1", "1", "1", "", "yellow", "1", "1", "1", "1", "1", "1"],
   ];
 
+  public objects = { empty: "", block: "1", blue: "blue", pink: "pink", yellow: "yellow", start: "start" };
   public selectedObject = "";
 
   constructor() { }
@@ -40,6 +41,9 @@ export class RealmCreatorComponent implements OnInit {
     this.selectedObject = object;
   }
 
+  blockClicked(item: any) {
+    item = this.selectedObject;
+  }
 
   getImage(input: string): string {
     switch(input) {
