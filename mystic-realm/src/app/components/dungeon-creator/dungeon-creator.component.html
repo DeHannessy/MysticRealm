@@ -1,0 +1,8 @@
+<h1>Welcome to the dungeon creator!</h1>
+
+<div class="dungeon-container">
+  <div class="row" *ngFor="let row of dungeon; let rowIndex = index">
+    <div class="block" *ngFor="let block of row; let blockIndex = index" (click)="changeColor(rowIndex, blockIndex)" [style]="getColor(rowIndex, blockIndex)">
+    </div>
+  </div>
+</div>
